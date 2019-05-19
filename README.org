@@ -1,0 +1,73 @@
+* Introduction
+Some tips for Linux Users.
+
+* Text Editor
+** Emacs
+Configuration: [[https://github.com/3badguys/.emacs.d][3badguys's Emacs configuration]]
+
+** Vim
+I think that I will never use vim. HAHAHA~~~
+
+* PDF Viewer
+** Zathura
+Zathura is a highly customizable and functional document viewer with vi-styled keybindings. It provides a minimalistic and space saving interface as well as an easy usage that mainly focuses on keyboard interaction. Different file formats are supported through plugins. Support is available for PDF, PS, DjVu and CB files.
+
+*** Installation
+#+BEGIN_SRC shell
+sudo apt install zathura zathura-djvu zathura-ps zathura-cb
+#+END_SRC
+
+*** Key Binding(Default)
+| Shortcut | Description                            |
+|----------+----------------------------------------|
+| Tab      | Show index and switch to index mode    |
+| :        | Enter command                          |
+| Escape   | Abort                                  |
+| q        | Quit                                   |
+| d        | Toggle dual page view                  |
+| /, ?     | Search for text                        |
+| n, N     | Search for the next or previous result |
+| o, O     | Open ducument                          |
+| gg       | Go to the first                        |
+| G        | Go to the last                         |
+| nG       | Go to the nth page                     |
+| h, Left  | Scroll to the left                     |
+| k, Down  | Scroll to the down                     |
+| j, Up    | Scroll to the up                       |
+| l, Right | Scroll to the right                    |
+| C-f      | Scroll page down                       |
+| C-b      | Scroll page up                         |
+| C-d      | Scroll half a page down                |
+| C-u      | Scroll half a page up                  |
+| r        | Rotate the page                        |
+| R        | Reload the document                    |
+| C-r      | Recolor(grayscale and invert colors)   |
+| a        | Adjust window in best-fit mode         |
+| s        | Adjust window in width mode            |
+| +        | Zoom in                                |
+| -        | Zoom out                               |
+| =        | Zoom to original size                  |
+| C-m      | Toggle inputbar                        |
+| C-n      | Toggle statusbar                       |
+| f        | Follow links                           |
+| F        | Display link target                    |
+
+*** Configuration
+emacs ~/.config/zathura/zathurarc
+#+BEGIN_SRC shell
+set incremental-search true
+set show-v-scrollbar true
+set selection-clipboard clipboard
+#+END_SRC
+
+* Search Tool
+** Recoll
+Recoll is a desktop full-text search tool.
+
+*** Installation
+#+BEGIN_SRC shell
+sudo apt install recoll
+#+END_SRC
+
+*** Preview
+[[file:pictures/Recoll.png][Recoll-preview]]
