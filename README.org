@@ -70,4 +70,4 @@ sudo apt install recoll
 #+END_SRC
 
 *** Preview
-[[file:pictures/Recoll.png][Recoll-preview]]
+[[./pictures/Recoll.png]]
