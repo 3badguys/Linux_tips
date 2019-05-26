@@ -82,3 +82,15 @@ sudo apt install recoll
 ** Recommendation
 + Cherry G80-3000/3494 RED
 + DasKeyborad Model S GREEN
+
+* Code Lines Count
+#+BEGIN_SRC shell
+  ### Install cloc
+  git clone https://github.com/3badguys/cloc.git
+  cd cloc
+  sudo ln -s `pwd`/cloc /usr/local/bin/cloc  # `pwd` get the current path
+
+  ### Use cloc
+  cd <code_path>
+  cloc .
+#+END_SRC
