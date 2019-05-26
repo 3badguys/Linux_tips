@@ -1,0 +1,76 @@
+!! $HOME/.Xresources
+URxvt.preeditType: root
+
+!! window geometry set
+URxvt.geometry: 90x25+180+200
+URxvt.title: cch-rxvt
+
+!! input method set
+URxvt.inputMethod: fcitx
+
+!! font set
+URxvt.dpi: 96
+URxvt.font: xft:Monospace:bold:size=11
+URxvt.multichar_encoding: utf-8
+
+!! extension set
+!URxvt.perl-ext-common: default, tabbed
+
+!! bg transparent set
+!URxvt.transparent: true
+!URxvt.inheritPixmap: true
+!URxvt.tintCddolor: white
+!URxvt.shading: 80
+
+! scroll bar set
+URxvt.scrollBar: true
+URxvt.scrollBar_right: true
+URxvt.scrollBar_floating: false
+URxvt.scrollstyle: plain
+
+!! scroll screen set
+URxvt.mouseWheelScrollPage: true
+URxvt.scrollTtyOutput: false
+URxvt.scrollWithBuffer: true
+URxvt.scrollTtyKeypress: true
+
+!! cache set
+URxvt.saveLines: 5000
+
+!! cursor set
+URxvt.cursorBlink: true
+
+!! border set
+URxvt.borderLess: false
+
+!! tab set
+!URxvt.tabbed.tab-fg: 12
+!URxvt.tabbed.tab-bg: 0
+!URxvt.tabbed.tabbar-fg: 4
+
+!Rxvt.menu: /etc/X11/rxvt.menu
+!Rxvt.transparency: 255
+
+!! urxvt color set
+URxvt.depth: 32
+URxvt.background: black
+URxvt.foreground: green
+URxvt.colorBD: yellow
+URxvt.colorUL: green
+URxvt.cursorColor: red3
+
+URxvt.color0: black
+URxvt.color1: red3
+URxvt.color2: springgreen
+URxvt.color3: wheat3
+URxvt.color4: navy
+URxvt.color5: magenta4
+URxvt.color6: steelblue1
+URxvt.color7: gray85
+URxvt.color8: gray10
+URxvt.color9: orangered2
+URxvt.color10: chartreuse3
+URxvt.color11: lightgoldenrod2
+URxvt.color12: skyblue1
+URxvt.color13: pink1
+URxvt.color14: lightblue1
