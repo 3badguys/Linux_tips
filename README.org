@@ -71,3 +71,14 @@ sudo apt install recoll
 
 *** Preview
 [[./pictures/Recoll.png]]
+
+* Keyborad
+** Test
+#+BEGIN_SRC shell
+  showkey -a
+  sudo showkey -k
+#+END_SRC
+
+** Recommendation
++ Cherry G80-3000/3494 RED
++ DasKeyborad Model S GREEN
