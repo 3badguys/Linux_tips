@@ -10,7 +10,8 @@ URxvt.inputMethod: fcitx
 
 !! font set
 URxvt.dpi: 96
-URxvt.font: xft:Monospace:bold:size=11
+!URxvt.font: xft:Monospace:bold:size=11
+URxvt.font: xft:Dejavu Sans Mono:bold:size=11:antialias=True,xft:WenQuanYi Micro Hei Mono:size=11:antialias=True
 URxvt.multichar_encoding: utf-8
 
 !! extension set
