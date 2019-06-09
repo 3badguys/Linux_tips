@@ -3,10 +3,38 @@ Some tips for Linux Users.
 
 * Text Editor
 ** Emacs
+I like Emacs, and it is the best editor in the world.
 Configuration: [[https://github.com/3badguys/.emacs.d][3badguys's Emacs configuration]]
 
 ** Vim
-I think that I will never use vim. HAHAHA~~~
+Vim will be just my second choice.
+Simple configuration:
+#+BEGIN_SRC shell
+  set langmenu=none
+  let $LANG = 'en_US'
+
+
+  set cursorline
+  set hlsearch
+
+  set number
+  set wrap
+
+  set tabstop=4
+  set shiftwidth=4
+  set smarttab
+  set cindent
+
+  set noundofile
+  set nobackup
+  set noswapfile
+
+  set guioptions-=T
+  set guioptions-=m
+  set guioptions-=L
+  set guioptions-=r
+  set guioptions-=b
+#+END_SRC
 
 * PDF Viewer
 ** Zathura
