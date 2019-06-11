@@ -124,6 +124,11 @@ sudo apt install recoll
 #+END_SRC
 
 * Terminal
+** PS1
+#+BEGIN_SRC shell
+  export PS1="\[\e[32m\][\u@\h \w]\$\[\e[m\] "
+#+END_SRC
+
 ** rxvt-unicode(urxvt)
 URxvt is a customizable terminal emulator forked from rxvt. Features of rxvt-unicode include international language support through Unicode, transparency, the ability to display multiple font types and support for Perl extensions. URxvt is one of the most popular terminal emulator in UNIX world, especially on Unixporn. It’s well known for being lightweight and riceable. But just like any other software in UNIX world, it’s ugly out of the box. So, we should configure it before we use it. URxvt configurations is commonly placed in ~/.Xresources file.
 
