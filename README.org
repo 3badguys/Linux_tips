@@ -141,7 +141,7 @@ URxvt is a customizable terminal emulator forked from rxvt. Features of rxvt-uni
 *** Configuration
 [[file:.Xresources][.Xresources]]
 
-*** tree
+** tree
 #+BEGIN_SRC shell
   # show color when using tree command
   alias tree='tree -FC'
