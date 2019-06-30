@@ -192,3 +192,11 @@ URxvt is a customizable terminal emulator forked from rxvt. Features of rxvt-uni
   git rebase HEAD~2
   git push -f origin <remote-branch>
 #+END_SRC
+
+** tig
+Tig is an ncurses-based text-mode interface for git. It functions mainly as a Git repository browser, but can also assist in staging changes for commit at chunk level and act as a pager for output from various Git commands.
+
+#+BEGIN_SRC shell
+  sudo apt install tig
+  tig  # click 'h'(help) to view the help-message
+#+END_SRC
