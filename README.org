@@ -176,8 +176,13 @@ URxvt is a customizable terminal emulator forked from rxvt. Features of rxvt-uni
   git branch -a
   git checkout <branch-name>
 
-  git remote add origin <remote-url>
   git remote -v
+  git remote add origin <remote-url>
+
+  # merge upstream to local
+  git remote add upstream <upstream-url>
+  git fetch upstream
+  git merge upstream/master
 
   # config file is ~/.gitconfig
   git config --list
