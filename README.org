@@ -1,6 +1,13 @@
 * Introduction
 Some tips for Linux Users.
 
+* Software Management
+#+BEGIN_SRC shell
+  # install package
+  sudo apt install <software>
+  sudo dpkg -i <xxx.deb>
+#+END_SRC
+
 * Text Editor
 ** Emacs
 I like Emacs, and it is the best editor in the world.
