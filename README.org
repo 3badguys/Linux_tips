@@ -148,6 +148,23 @@ URxvt is a customizable terminal emulator forked from rxvt. Features of rxvt-uni
 *** Configuration
 [[file:dotfiles/.Xresources][.Xresources]]
 
+** lilyterm
+LilyTerm is a terminal emulator based off of libvte that aims to be fast and lightweight, Licensed under GPLv3.
+
+*** Installation
+#+BEGIN_SRC shell
+  sudo apt install libvte-dev
+
+  git clone https://github.com/Tetralet/LilyTerm.git
+  cd LilyTerm
+  ./configure
+  make
+  sudo make install
+#+END_SRC
+
+*** Configuration
+[[file:dotfiles/lilyterm/default.conf][default.conf]]
+
 ** tmux
 tmux is a terminal multiplexer for Unix-like operating systems. It allows multiple terminal sessions to be accessed simultaneously in a single window. It is useful for running more than one command-line program at the same time. It can also be used to detach processes from their controlling terminals, allowing SSH sessions to remain active without being visible.
 
