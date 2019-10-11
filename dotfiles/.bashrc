@@ -121,7 +121,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PS1='${debian_chroot:+($debian_chroot)}\[\e[1;33m\]\u\[\e[1;31m\]@\[\e[1;35m\]\h\[\e[1;32m\][\t]\[\e[1;31m\]:\[\e[1;36m\]\w\[\e[1;34m\]\$\[\e[0;39m\] '
+export PS1="\[\033[01;36m\][\u\[\033[01;35m\]@\[\033[01;36m\]\h \[\033[01;34m\]\w \[\033[01;37m\]\$?\[\033[01;36m\] ]\$\[\033[00m\] "
 
 [ -e $HOME/.dircolors ] && eval $(dircolors -b $HOME/.dircolors) || eval $(dircolors -b)
 
