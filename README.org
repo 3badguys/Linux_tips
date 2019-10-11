@@ -136,6 +136,15 @@ sudo apt install recoll
   export PS1='${debian_chroot:+($debian_chroot)}\[\e[1;33m\]\u\[\e[1;31m\]@\[\e[1;35m\]\h\[\e[1;32m\][\t]\[\e[1;31m\]:\[\e[1;36m\]\w\[\e[1;34m\]\$\[\e[0;39m\] '
 #+END_SRC
 
+** dircolors
+Run *ls* on a folder with directories that have a 777 permission, then these directories's color is unreadable.
+
+#+BEGIN_SRC shell
+  dircolors -p > ~/.dircolors
+  # change .dircolors's OTHER_WRITABLE option from 34;42 to 30;42
+  eval $(dircolors ~/.dircolors)
+#+END_SRC
+
 ** rxvt-unicode(urxvt)
 URxvt is a customizable terminal emulator forked from rxvt. Features of rxvt-unicode include international language support through Unicode, transparency, the ability to display multiple font types and support for Perl extensions. URxvt is one of the most popular terminal emulator in UNIX world, especially on Unixporn. It’s well known for being lightweight and riceable. But just like any other software in UNIX world, it’s ugly out of the box. So, we should configure it before we use it. URxvt configurations is commonly placed in ~/.Xresources file.
 
