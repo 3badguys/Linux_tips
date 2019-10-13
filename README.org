@@ -180,6 +180,12 @@ tmux is a terminal multiplexer for Unix-like operating systems. It allows multip
 *** Installation
 #+BEGIN_SRC shell
   sudo apt install tmux
+
+  # cygwin copy to system clipborad
+  # use tmux-yank plugin
+  git clone https://github.com/tmux-plugins/tmux-yank
+  # cygutils contain getclip/putclip
+  apt-cyg install cygutils-extra
 #+END_SRC
 
 *** Configuration
