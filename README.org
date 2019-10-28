@@ -287,8 +287,21 @@ If you use git-bash or cygwin in windows system, you can consider to config you 
   git commit --amend
   git push orgin <remote-branch>
 
-  git rebase HEAD~2
+  git rebase -i HEAD~2
   git push -f origin <remote-branch>
+
+  git checkout <master_branch>
+  git pull
+  git checkout <develop_branch>
+  git rebase <master_branch>
+  git push -f origin <develop_branch>
+
+  git checkout <master_branch>
+  git branch -D <develop_branch> # record develop_branch's newest commit-id as <new_commit_id>
+  git pull
+  git checkout -b <develop_branch>
+  git cherry-pick <new_commit_id>
+  git push -f origin <develop_branch>
 #+END_SRC
 
 ** tig
