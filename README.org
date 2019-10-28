@@ -298,3 +298,24 @@ Tig is an ncurses-based text-mode interface for git. It functions mainly as a Gi
   sudo apt install tig
   tig  # click 'h'(help) to view the help-message
 #+END_SRC
+
+* Shell Command
+** sshpass
+Noninteractive ssh password provider.
+
+*** Installation
+#+BEGIN_SRC shell
+  sudo apt install sshpass
+#+END_SRC
+
+*** Usage
+#+BEGIN_SRC shell
+  # Copy remote server's file to local
+  sshpass -p {password} scp {remote_user}@{remote_IP}:{remote_FILE} {local_DIR}
+
+  # Copy local file to remote server
+  sshpass -p {password} scp {local_FILE} {remote_user}@{remote_IP}:{remote_DIR}
+
+  # Rum command in remote server
+  sshpass -p {password} ssh {remote_user}@{remote_IP}
+#+END_SRC
