@@ -332,3 +332,21 @@ Noninteractive ssh password provider.
   # Rum command in remote server
   sshpass -p {password} ssh {remote_user}@{remote_IP}
 #+END_SRC
+
+** FIGlet
+FIGlet is a program for making large letters out of ordinary text.
+
+*** Installation
+#+BEGIN_SRC shell
+  sudo apt install figlet
+#+END_SRC
+
+*** Usage
+#+BEGIN_SRC shell
+  figlet "FIGlet"
+  # Output:
+  #  ___ ___ ___ _     _
+  # | __|_ _/ __| |___| |_
+  # | _| | | (_ | / -_)  _|
+  # |_| |___\___|_\___|\__|
+#+END_SRC
