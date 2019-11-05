@@ -350,3 +350,39 @@ FIGlet is a program for making large letters out of ordinary text.
   # | _| | | (_ | / -_)  _|
   # |_| |___\___|_\___|\__|
 #+END_SRC
+
+** ip commands
+/ip/ command is somewhat similar to /ifconfig/ command but it's much more powerful with much more functionalities attached to it.
+
+#+BEGIN_SRC shell
+  # view network statistics
+  ip -s link
+
+  # show information of network interface
+  ip addr show {iface_name}
+  ip a s {iface_name}
+
+  # enable & disable network interface
+  ip link set {iface_name} up
+  ip link set {iface_name} down
+
+  # assign IP address to network interface
+  ip addr add {ip_addr}/{netmask} dev {iface_name}
+
+  # remove IP address from network interface
+  ip addr del {ip_addr}/{netmask_len} dev {iface_name}
+  ip addr flush dev {iface_name}
+
+  # check network routing information
+  ip route show
+  ip route get {ip_addr}
+
+  # view entries in ARP cache
+  ip neigh
+
+  # delete ARP entry
+  ip neigh del {ip_addr} dev {iface_name}
+
+  # help
+  ip help
+#+END_SRC
