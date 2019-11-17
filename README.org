@@ -386,3 +386,10 @@ FIGlet is a program for making large letters out of ordinary text.
   # help
   ip help
 #+END_SRC
+
+** dd
+On Unix-like operating systems, the dd command copies a file, converting the format of the data in the process.
+#+BEGIN_SRC shell
+  # Example:
+  dd bs=4M if=xxx.img of=/dev/sdx status=progress
+#+END_SRC
