@@ -3,9 +3,12 @@ Some tips for Linux Users.
 
 * Software Management
 #+BEGIN_SRC shell
-  # install package
+  # Install package
   sudo apt install <software>
+
   sudo dpkg -i <xxx.deb>
+  # If there are dependency problems, may run:
+  sudo apt -f install
 #+END_SRC
 
 * Text Editor
