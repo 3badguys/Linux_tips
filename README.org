@@ -250,6 +250,15 @@ If you use git-bash or cygwin in windows system, you can consider to config you 
   git --version
 #+END_SRC
 
+** Completion
+The function of completion just like git bash.
+#+BEGIN_SRC shell
+  git clone https://github.com/git/git.git
+  cp git/contrib/completion/git-completion.bash ~/.git-completion.bash
+  # Add the next line to ~/.bashrc
+  source ~/.git-completion.bash
+#+END_SRC
+
 ** Frequently-used command
 #+BEGIN_SRC shell
   git clone <repo-url>
