@@ -287,6 +287,8 @@ The function of completion just like git bash.
   git config --global user.name <user-name>
   git config --global user.email <user-email>
   git config --global core.editor emacs
+  # avoid to input username and password
+  git config --global credential.helper store
 
   git reset <commit-id> --hard
 
