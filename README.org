@@ -121,6 +121,14 @@ sudo apt install recoll
 + Cherry G80-3000/3494 RED
 + DasKeyborad Model S GREEN
 
+** xmodmap
+xmodmap is a utility for modifying keymaps and pointer button mappings in Xorg.
+#+BEGIN_SRC shell
+  # When you restart, the .Xmodmap will run automatically.
+  xmodmap ~/.Xmodmap
+#+END_SRC
+[[file:dotfiles/.Xmodmap][.Xmodmap]]
+
 * Code Lines Count
 #+BEGIN_SRC shell
   ### Install cloc

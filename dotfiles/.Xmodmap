@@ -1,0 +1,14 @@
+! -*- coding: utf-8 -*-
+! 2019-02-02
+! Linux: Make CapsLock Do Home Key
+!        Make Shift_R Do CapsLock Key
+! refer to: http://xahlee.info/linux/linux_capslock_do_home_key.html
+
+! Command: xmodmap -pke
+! keycode  66 = Caps_Lock NoSymbol Caps_Lock
+! keycode  62 = Shift_R NoSymbol Shift_R
+! keycode 110 = Home NoSymbol Home
+
+clear Lock
+keycode 66 = Home NoSymbol Home
+keycode 62 = Caps_Lock NoSymbol Caps_Lock
