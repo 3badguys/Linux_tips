@@ -320,6 +320,25 @@ The function of completion just like git bash.
   git push -f origin <develop_branch>
 #+END_SRC
 
+** git submodule
+Submodules allow you to keep a Git repository as a subdirectory of another Git repository. This lets you clone another repository into your project and keep your commits separate.
+#+BEGIN_SRC shell
+  # Add a submodule, .gitmodules will be changed
+  git submodule add {remote_url} {local_path}
+
+  # After clone a project contain submodules
+  git submodule init
+  git submodule update
+  # Alternative
+  git submodule update --init --recursive
+
+  # Delete a submodule
+  rm -rf {local_path}
+  emacs .gitmodules
+  emacs .git/config
+  rm -rf .git/modules/{local_path}
+#+END_SRC
+
 ** tig
 Tig is an ncurses-based text-mode interface for git. It functions mainly as a Git repository browser, but can also assist in staging changes for commit at chunk level and act as a pager for output from various Git commands.
 
