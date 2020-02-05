@@ -323,6 +323,30 @@ The function of completion just like git bash.
   git push origin --delete <remote-branch>
   # Alternative: push a empty local branch to remote
   git push origin :<remote-branch>
+
+  # save a stash
+  git stash
+  git stash save "stash_message"
+  # list stash
+  git stash list
+  # show the last stash
+  git stash show
+  # show the specific stash
+  git stash show stash@{index}
+  # apply the last stash
+  git stash apply
+  # apply the specific stash
+  git stash apply stash@{index}
+  # drop the last stash
+  git stash drop
+  # drop the special stash
+  git stash drop stash@{index}
+  # apply the last stash and drop it
+  git stash pop
+  # apply the specific stash and drop it
+  git stash pop stash@{index}
+  # clear all stash
+  git stash clear
 #+END_SRC
 
 ** git submodule
