@@ -318,6 +318,11 @@ The function of completion just like git bash.
   git checkout -b <develop_branch>
   git cherry-pick <new_commit_id>
   git push -f origin <develop_branch>
+
+  # delete a remote branch
+  git push origin --delete <remote-branch>
+  # Alternative: push a empty local branch to remote
+  git push origin :<remote-branch>
 #+END_SRC
 
 ** git submodule
