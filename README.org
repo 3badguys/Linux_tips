@@ -206,7 +206,7 @@ tmux is a terminal multiplexer for Unix-like operating systems. It allows multip
 [[file:material/tmux_cheat_sheet.pdf][tmux_cheat_sheet]]
 
 ** mintty
-If you use git-bash or cygwin in windows system, you can consider to config you mintty terminal:
+If you use git-bash or cygwin in windows system, you may consider to config your mintty terminal through [[file:dotfiles/.minttyrc][.minttyrc]]:
 #+BEGIN_SRC  shell
   #
   # dotfiles/.minttyrc - Configuration file for mintty terminal
@@ -314,11 +314,23 @@ The function of completion just like git bash.
   git rebase <master_branch>
   git push -f origin <develop_branch>
 
+  # handle conflicts
+  # method 1. by cherry-pick
   git checkout <master_branch>
   git branch -D <develop_branch> # record develop_branch's newest commit-id as <new_commit_id>
   git pull
   git checkout -b <develop_branch>
   git cherry-pick <new_commit_id>
+  # after handle conflicts, continue to cherry-pick
+  git cherry-pick --continue
+  git push -f origin <develop_branch>
+  # method 2. by rebase
+  git checkout <master_branch>
+  git pull
+  git checkout <develop_branch>
+  git rebase <master_branch>
+  # after handle confilcts, continue to rebase
+  git rebase --continue
   git push -f origin <develop_branch>
 
   # delete a remote branch
