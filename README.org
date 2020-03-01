@@ -391,6 +391,23 @@ Tig is an ncurses-based text-mode interface for git. It functions mainly as a Gi
 #+END_SRC
 
 * Shell Command
+** date, time and time-zone
+#+BEGIN_SRC shell
+  date
+  date -R
+
+  # Asia -> China -> Beijing Time
+  tzselect
+  # Add to '.bashrc' or '.profile' in your home directory
+  TZ='Asia/Shanghai'; export TZ
+  # To make this change permanent
+  source ~/.bashrc
+
+  timedatectl status
+  timedatectl list-timezones
+  timedatectl set-timezone {ZONE e.g. Asia/Shanghai}
+#+END_SRC
+
 ** sshpass
 Noninteractive ssh password provider.
 
