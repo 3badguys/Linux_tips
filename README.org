@@ -17,34 +17,7 @@ I like Emacs, and it is the best editor in the world.
 Configuration: [[https://github.com/3badguys/.emacs.d][3badguys's Emacs configuration]]
 
 ** Vim
-Vim will be just my second choice.
-Simple configuration:
-#+BEGIN_SRC shell
-  set langmenu=none
-  let $LANG = 'en_US'
-
-
-  set cursorline
-  set hlsearch
-
-  set number
-  set wrap
-
-  set tabstop=4
-  set shiftwidth=4
-  set smarttab
-  set cindent
-
-  set noundofile
-  set nobackup
-  set noswapfile
-
-  set guioptions-=T
-  set guioptions-=m
-  set guioptions-=L
-  set guioptions-=r
-  set guioptions-=b
-#+END_SRC
+Vim is just an alternative choice and I don't really like it.
 
 * PDF Viewer
 ** Zathura
@@ -97,18 +70,6 @@ set incremental-search true
 set show-v-scrollbar true
 set selection-clipboard clipboard
 #+END_SRC
-
-* Search Tool
-** Recoll
-Recoll is a desktop full-text search tool.
-
-*** Installation
-#+BEGIN_SRC shell
-sudo apt install recoll
-#+END_SRC
-
-*** Preview
-[[./pictures/Recoll.png]]
 
 * Keyborad
 ** Test
@@ -381,14 +342,6 @@ Submodules allow you to keep a Git repository as a subdirectory of another Git r
   emacs .gitmodules
   emacs .git/config
   rm -rf .git/modules/{local_path}
-#+END_SRC
-
-** tig
-Tig is an ncurses-based text-mode interface for git. It functions mainly as a Git repository browser, but can also assist in staging changes for commit at chunk level and act as a pager for output from various Git commands.
-
-#+BEGIN_SRC shell
-  sudo apt install tig
-  tig  # click 'h'(help) to view the help-message
 #+END_SRC
 
 * Shell Command
