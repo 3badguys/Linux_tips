@@ -214,6 +214,12 @@ If you use git-bash or cygwin in windows system, you may consider to config your
   git --version
 #+END_SRC
 
+** Generate SSH Public Key
+#+BEGIN_SRC shell
+  ssh-keygen -o
+  cat ~/.ssh/id_rsa.pub
+#+END_SRC
+
 ** Completion
 The function of completion just like git bash.
 #+BEGIN_SRC shell
