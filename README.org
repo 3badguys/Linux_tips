@@ -387,6 +387,9 @@ Noninteractive ssh password provider.
 
   # Rum command in remote server
   sshpass -p {password} ssh {remote_user}@{remote_IP}
+
+  # Example
+  for i in $(seq 168 269); do sshpass -p {password} scp root@{remote_IP}:/root/code_proj/GTM/GTM$i* ./; done
 #+END_SRC
 
 ** FIGlet
