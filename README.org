@@ -388,8 +388,10 @@ Noninteractive ssh password provider.
   # Copy local file to remote server
   sshpass -p {password} scp {local_FILE} {remote_user}@{remote_IP}:{remote_DIR}
 
-  # Rum command in remote server
+  # Run command in remote server
   sshpass -p {password} ssh {remote_user}@{remote_IP}
+  # Disable strict host key checking
+  sshpass -p {password} ssh -o StrictHostKeyChecking=no {remote_user}@{remote_IP}
 
   # Example
   for i in $(seq 168 269); do sshpass -p {password} scp root@{remote_IP}:/root/code_proj/GTM/GTM$i* ./; done
