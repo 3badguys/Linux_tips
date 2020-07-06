@@ -236,6 +236,9 @@ The function of completion just like git bash.
   git status
   git log
 
+  # Summarize git log output
+  git shortlog -sn
+
   git diff
   git diff --stat
   git diff <commit-id> --stat
