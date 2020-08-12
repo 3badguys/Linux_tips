@@ -79,9 +79,10 @@ set selection-clipboard clipboard
 #+END_SRC
 
 ** Recommendation
-+ X-Bows Nature RED
-+ Cherry G80-3000/3494 RED
-+ DasKeyborad Model S GREEN
++ Kinesis Advantage2 *BROWN*
++ X-Bows Nature *RED*
++ Cherry G80-3000/3494 *RED*
++ DasKeyborad Model S *GREEN*
 
 ** xmodmap
 xmodmap is a utility for modifying keymaps and pointer button mappings in Xorg.
