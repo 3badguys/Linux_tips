@@ -348,6 +348,9 @@ Submodules allow you to keep a Git repository as a subdirectory of another Git r
   # Alternative
   git submodule update --init --recursive
 
+  # fetch and update submodules
+  git submodule update --remote
+
   # Delete a submodule
   rm -rf {local_path}
   emacs .gitmodules
