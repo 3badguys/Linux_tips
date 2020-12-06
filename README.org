@@ -232,22 +232,59 @@ The function of completion just like git bash.
 
 ** Frequently-used command
 #+BEGIN_SRC shell
+  # create a git repository in current dir
+  git init
+  # clone a project
   git clone <repo-url>
 
+  # work with git repo without cd into the dir
+  git --git-dir=<project-dir>/.git/ status
+
+  # show current status
   git status
+
   git log
+  # show last 3 commits
+  git log -3
+  # show diff of last changes
+  git log -p -3
+
+  # show what revision and author last modified each line of a file
+  git blame <file-name>
 
   # Summarize git log output
   git shortlog -sn
 
+  # diff working dir vs staging area
   git diff
   git diff --stat
-  git diff <commit-id> --stat
+  # diff staging area vs the specific commit
+  git diff --staged <commit-id>
+  # diff working dir vs the specific commit
+  git diff <commit-id>
 
+  # show all local branches
   git branch
+  # show all remote branches
+  git branch -r
+  # show all local and remote branches
   git branch -a
+  # show branches and their commits
+  git show-branch
+  # create a branch
+  git branch <new-branch> <from-branch>
+  # switch to the specific branch
   git checkout <branch-name>
+  # rename the specific branch
+  git branch -m <old_branch> <new-branch>
+  # rename the specific branch, even if there already exists new branch
+  git branch -M <old_branch> <new-branch>
+  # delete the specific branch.(the branch must be merged first)
+  git branch -d <branch-name>
+  # delete the specific branch
+  git branch -D <branch-name>
 
+  # upstream repository
   git remote -v
   git remote add origin <remote-url>
 
@@ -265,15 +302,33 @@ The function of completion just like git bash.
   git config --global credential.helper store
   # run git command in eshell, to avoid `WARNING: terminal is not fully functional`
   git config --global core.pager '`test "$TERM" = "dumb" && echo cat || echo less`'
+  # make git always use color in diff
+  git config --global color.ui true
 
+  # revert file
+  git checkout -- <file-name>
+  # revert file to the specific commit
+  git checkout <commit-id> -- file_name
+  # reset to the specific commit, but keep your changes
+  git reset <commit-id> --soft
+  # reset to the specific commit
   git reset <commit-id> --hard
 
+  # show the commit id the current HEAD points to
+  cd <project-dir>; cat .git/HEAD # sample output: ref: refs/heads/master
+  cat .git/refs/heads/master
+
+  # create a branch a switch to it
   git checkout -b <local-branch> <remote-branch>
 
+  # including new or deleted file/dir
+  git add -A .
+  # commit a change
   git add .
   git commit -m "commit-massage"
   git push origin <remote-branch>
 
+  # update last commit change
   git commit --amend
   git commit --amend --author="Author Name <email@address.com>"
   git push orgin <remote-branch>
@@ -312,7 +367,7 @@ The function of completion just like git bash.
   git push origin :<remote-branch>
 
   # save a stash
-  git stash
+  git stash save
   git stash save "stash_message"
   # list stash
   git stash list
