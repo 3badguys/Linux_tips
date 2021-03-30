@@ -413,6 +413,19 @@ Submodules allow you to keep a Git repository as a subdirectory of another Git r
   rm -rf .git/modules/{local_path}
 #+END_SRC
 
+* Latex Environment
+** texmaker
+#+BEGIN_SRC shell
+  # Install texlive and texmaker
+  sudo apt install texlive-full
+  sudo apt install texmaker
+
+  # Copy fonts from windows system
+  sudo mkdir /usr/share/fonts/opentype/windows_font
+  sudo cp -R /media/<win_user>/win7/Windows/Fonts/* /usr/share/fonts/opentype/windows_font/
+  sudo fc-cache -f -v
+#+END_SRC
+
 * Shell Command
 ** date, time and time-zone
 #+BEGIN_SRC shell
