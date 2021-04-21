@@ -208,6 +208,11 @@ If you use git-bash or cygwin in windows system, you may consider to config your
 
 #+END_SRC
 
+** Change host-name
+Modify the following config files:
++ /etc/hostname
++ /etc/hosts
+
 * Git
 ** Installation
 #+BEGIN_SRC shell
