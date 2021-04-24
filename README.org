@@ -418,6 +418,19 @@ Submodules allow you to keep a Git repository as a subdirectory of another Git r
   rm -rf .git/modules/{local_path}
 #+END_SRC
 
+* Universal Ctags
+Universal Ctags (abbreviated as u-ctags) is a maintained implementation of ctags. ctags generates an index (or tag) file of language objects found in source files for programming languages. This index makes it easy for text editors and other tools to locate the indexed items.
+
+** Installation
+#+BEGIN_SRC shell
+  git clone https://github.com/universal-ctags/ctags.git
+  cd ctags
+  ./autogen.sh
+  ./configure --prefix=/where/you/want # defaults to /usr/local
+  make
+  sudo make install
+#+END_SRC
+
 * Latex Environment
 ** texmaker
 #+BEGIN_SRC shell
