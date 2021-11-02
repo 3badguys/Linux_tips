@@ -310,6 +310,8 @@ The function of completion just like git bash.
   git config --global core.pager '`test "$TERM" = "dumb" && echo cat || echo less`'
   # make git always use color in diff
   git config --global color.ui true
+  # ignore file mode
+  git config core.filemode false
 
   # revert file
   git checkout -- <file-name>
