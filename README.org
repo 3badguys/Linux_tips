@@ -556,11 +556,10 @@ ProxyChains is a UNIX program, that hooks network-related libc functions in DYNA
 #+BEGIN_SRC shell
   git clone https://github.com/rofl0r/proxychains-ng.git
   cd proxychains-ng
-  make && sudo make install
+  ./configure && make && sudo make install && sudo make install-config
 
-  cp src/proxychains.conf /etc/proxychains.conf
   # change config of proxychains.conf, e.g. socks5 127.0.0.1 1080
-  sudo emacs /etc/proxychains.conf
+  sudo emacs /usr/local/etc/proxychains.conf
 
   # Usage
   proxychains4 <command, e.g. git clone ???>
