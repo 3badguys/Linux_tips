@@ -285,10 +285,12 @@ The function of completion just like git bash.
   git branch -m <old_branch> <new-branch>
   # rename the specific branch, even if there already exists new branch
   git branch -M <old_branch> <new-branch>
-  # delete the specific branch.(the branch must be merged first)
+  # delete the specific local branch(the branch must be merged first)
   git branch -d <branch-name>
-  # delete the specific branch
+  # delete the specific local branch
   git branch -D <branch-name>
+  # delete the specific remote branch
+  git push origin --delete <branch-name>
 
   # upstream repository
   git remote -v
