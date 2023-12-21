@@ -566,3 +566,27 @@ ProxyChains is a UNIX program, that hooks network-related libc functions in DYNA
   # Usage
   proxychains4 <command, e.g. git clone ???>
 #+END_SRC
+
+* WSL2
+** Portproxy in windows
+#+BEGIN_SRC shell
+  netsh interface portproxy add v4tov4 listenport=667 listenaddress=0.0.0.0 connectport=667 connectaddress=127.0.0.1
+#+END_SRC
+
+** Allow WSL access windows
+#+BEGIN_SRC shell
+  New-NetFirewallRule -DisplayName "WSL" -Direction Inbound -InterfaceAlias "vEthernet (WSL)" -Action Allow
+#+END_SRC
+
+** Update proxychains config
+#+BEGIN_SRC shell
+  WINDOWS_IP=$(grep nameserver /etc/resolv.conf | awk '{print $2}' | head -1)
+  WINDOWS_PROXY_PORT=667
+  function update_proxychains_conf() {
+      sed -i '/\[ProxyList\]/,$d' ~/.config/proxychains4/proxychains.conf
+      echo "[ProxyList]" | tee -a ~/.config/proxychains4/proxychains.conf > /dev/null
+      echo "socks5 ${WINDOWS_IP} ${WINDOWS_PROXY_PORT}" | tee -a ~/.config/proxychains4/proxychains.conf > /dev/null
+  }
+  update_proxychains_conf
+  alias proxychains4='proxychains4 -f ~/.config/proxychains4/proxychains.conf'
+#+END_SRC
