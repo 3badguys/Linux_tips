@@ -570,6 +570,9 @@ ProxyChains is a UNIX program, that hooks network-related libc functions in DYNA
 * WSL2
 ** Portproxy in windows
 #+BEGIN_SRC shell
+  # if proxyport is in used, try to find the PID and kill it
+  netstat -ano | findstr 0.0.0.0:667
+
   netsh interface portproxy add v4tov4 listenport=667 listenaddress=0.0.0.0 connectport=667 connectaddress=127.0.0.1
 #+END_SRC
 
