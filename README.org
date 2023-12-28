@@ -583,7 +583,12 @@ ProxyChains is a UNIX program, that hooks network-related libc functions in DYNA
 
 ** Update proxychains config
 #+BEGIN_SRC shell
-  WINDOWS_IP=$(grep nameserver /etc/resolv.conf | awk '{print $2}' | head -1)
+  WSL_VERSION=$(uname -r | grep WSL2 > /dev/null && echo "WSL2" || echo "WSL1")
+  if [ "$WSL_VERSION" == 'WSL2' ]; then
+      WINDOWS_IP=$(grep nameserver /etc/resolv.conf | awk '{print $2}' | head -1)
+  else
+      WINDOWS_IP="127.0.0.1"
+  fi
   WINDOWS_PROXY_PORT=667
   function update_proxychains_conf() {
       sed -i '/\[ProxyList\]/,$d' ~/.config/proxychains4/proxychains.conf
