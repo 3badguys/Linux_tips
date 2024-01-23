@@ -338,6 +338,11 @@ The function of completion just like git bash.
   git commit -m "commit-massage"
   git push origin <remote-branch>
 
+  # remove file in remote, but keep in local
+  git rm --cached <file-name>
+  # remove directory in remote, but keep in local
+  git rm -r --cached <directory>
+
   # update last commit change
   git commit --amend
   git commit --amend --author="Author Name <email@address.com>"
